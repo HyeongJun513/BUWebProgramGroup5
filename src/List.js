@@ -91,6 +91,7 @@ class List extends Component {
        return (
          <Movie
           key={movie.movieCd}
+          moviecd={movie.movieCd}
           title={movie.movieNm}
           audiCnt={movie.audiCnt}
           rank={movie.rank}

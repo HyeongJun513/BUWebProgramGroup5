@@ -4,6 +4,7 @@ import { movieDetailGetFetch } from "./apis/movieDetailGetFetch";
 const Detail = ({ movieId }) => {
   const [loading, setLoading] = useState(true);
   const [info, setInfo] = useState({});
+  const [showExtraInfo, setShowExtraInfo] = useState(false); // 추가 정보를 표시할지 여부를 관리하는 상태
 
   useEffect(() => {
     const fetchMovieDetail = async () => {
@@ -36,14 +37,18 @@ const Detail = ({ movieId }) => {
     typeNm,
   } = info;
 
+  const handleToggleExtraInfo = () => {
+    setShowExtraInfo(!showExtraInfo); // 추가 정보를 표시할지 여부를 반전시킴
+  };
+
   return loading ? (
     <div>로딩중입니다..</div>
   ) : (
     <div>
       <div>
-        {/* <h1>
+        <h1>
           {movieNm} ({movieNmEn})
-        </h1> */}
+        </h1> 
         <div>
           <div>감독</div>
           <div>
@@ -74,20 +79,28 @@ const Detail = ({ movieId }) => {
         </div>
       </div>
 
-      <div>
-        배우들
-        <ul style={{ listStyle: "none" }}>
-          {actors?.map((actor, i) => (
-            <li key={i}>
-              <div>
-                이름: {actor.peopleNm} 배역: {actor.cast}
-              </div>
-            </li>
-          ))}
-        </ul>
-      </div>
+      {showExtraInfo && ( // 추가 정보를 표시할 때만 아래 내용을 렌더링
+        <div>
+          <div>
+            배우들
+            <ul style={{ listStyle: "none" }}>
+              {actors?.map((actor, i) => (
+                <li key={i}>
+                  <div>
+                    이름: {actor.peopleNm} 배역: {actor.cast}
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
 
-      <div>영화 유형: {typeNm}</div>
+          <div>영화 유형: {typeNm}</div>
+        </div>
+      )}
+
+      <button onClick={handleToggleExtraInfo}>
+        {showExtraInfo ? "추가 정보 닫기" : "추가 정보 보기"}
+      </button>
     </div>
   );
 };

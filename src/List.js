@@ -82,8 +82,8 @@ class List extends Component {
      console.log("date2값 : " + date2);
      //div1
      return <div>  <div id='div1'>
-      <h3>현재 date값 : [ {date} ]</h3>
-      <button onClick={this.onHandler}>이전으로</button>
+      <h3> {date.substring(0,4)}년 {date.substring(4,6)}월 {date.substring(6,8)}일 박스오피스</h3>
+      <button onClick={this.onHandler}>메인페이지로</button>
       {/* <p><button onClick={this.isSelectHandlerTrue}>isSelect true로 변경</button>  <button onClick={this.isSelectHandlerFalse}>isSelect false로 변경</button></p>  */}
       </div>
       { isSelect ? <div><h2>로딩중입니다.</h2> <p>Select.js의 현재 isSelect값 : false</p></div> : movies.map((movie) => {

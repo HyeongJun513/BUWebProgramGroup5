@@ -40,7 +40,6 @@ class App extends Component {
 
     Div1Invisible = () => { //Div1 숨기기
         const div = document.getElementById('div1');
-        // div.remove();
         if (div.style.display === 'none') {
             div.style.display = 'block';
         } else {
@@ -55,7 +54,7 @@ class App extends Component {
     }
 
     render() {
-        console.log("3. render Call")
+        //console.log("3. render Call")
         const { mainBool, date } = this.state;
         return (
             <div align='center'>
@@ -65,7 +64,7 @@ class App extends Component {
                     <button onClick={this.Search}>박스오피스 순위 보기</button></div><hr />
                 {mainBool ? <List date={date} mainBoolHandlerFalse={this.mainBoolHandlerFalse} Div1Invisible={this.Div1Invisible} /> :
                     <div><h1> App.js </h1> <h3> 상단에 date값을 변경하고 박스오피스 순위를 불러오세요. ex) 20221225 </h3>
-                    <p> (Input값 없이 순위 조회 시 default값 20120101 설정) </p></div>}
+                        <p> (Input값 없이 순위 조회 시 default값 20120101 설정) </p></div>}
             </div>
         );
     }

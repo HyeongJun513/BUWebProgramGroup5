@@ -4,6 +4,26 @@
 }
 
 .details-open {
-    border: 3px dotted blue;
-    background-color: rgb(196, 214, 248)
+    border: 3px solid blue;
+    background-color: rgb(254, 254, 255)
 }
+
+.button {
+    background-color: cornflowerblue;
+    color: #ffffff;
+    font-size: 15px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }
+
+  #plusbutton {
+    background-color: cornflowerblue;
+    color: white;
+    font-size: 15px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  }

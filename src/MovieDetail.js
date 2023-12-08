@@ -50,12 +50,10 @@ const Detail = ({ movieId }) => {
           {movieNm} ({movieNmEn})
         </h1> 
         <div>
-          <div>감독</div>
-          <div>
-            {directors?.map((director, i) => (
-              <span key={i}>{director.peopleNm}<br /></span>
+          <div>감독: {directors?.map((director, i) => (
+              <span key={i}>{director.peopleNm} </span>
             ))}
-          </div>
+            </div>
         </div>
         <div>
           {audits?.map((rule) => rule.watchGradeNm)}
@@ -71,18 +69,16 @@ const Detail = ({ movieId }) => {
       </div>
 
       <div>
-        <div>장르</div>
-        <div>
-          {genres?.map((genre, i) => (
-            <div key={i}>{genre.genreNm}</div>
+        <div>장르:{genres?.map((genre, i) => ( 
+         <div key={i}>{genre.genreNm}</div>
           ))}
-        </div>
+          </div>
       </div>
 
       {showExtraInfo && ( // 추가 정보를 표시할 때만 아래 내용을 렌더링
         <div>
           <div>
-            배우들
+            <h3>배우들</h3>
             <ul style={{ listStyle: "none" }}>
               {actors?.map((actor, i) => (
                 <li key={i}>
@@ -98,8 +94,8 @@ const Detail = ({ movieId }) => {
         </div>
       )}
 
-      <button onClick={handleToggleExtraInfo}>
-        {showExtraInfo ? "추가 정보 닫기" : "추가 정보 보기"}
+      <button id="plusbutton" onClick={handleToggleExtraInfo}>
+        {showExtraInfo ? "추가 정보 닫기" : "더보기"}
       </button>
     </div>
   );

@@ -61,7 +61,7 @@ class App extends Component {
                 <div id='div1'>
                     <p> 입력된 date : [ {date} ]</p>
                     <p><input id="Cdate" name="Cdate" placeholder="date값 입력 ex)20120101" onChange={this.onChangeValue} /> </p>
-                    <button onClick={this.Search}>박스오피스 순위 보기</button></div><hr />
+                    <button className='button' onClick={this.Search}>박스오피스 순위 보기</button></div><hr />
                 {mainBool ? <List date={date} mainBoolHandlerFalse={this.mainBoolHandlerFalse} Div1Invisible={this.Div1Invisible} /> :
                     <div><h1> App.js </h1> <h3> 상단에 date값을 변경하고 박스오피스 순위를 불러오세요. ex) 20221225 </h3>
                         <p> (Input값 없이 순위 조회 시 default값 20120101 설정) </p></div>}

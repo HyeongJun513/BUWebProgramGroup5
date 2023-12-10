@@ -1,13 +1,11 @@
-import React, { Component } from 'react';
+// import React from 'react';
 
-class Info extends Component {
-    render() {
-        return (
-            <div>
-                Info.js
-            </div>
-        );
-    }
-}
+// function Info(props) {
+//     return (
+//         <div>
+//             info.js 입니다!!!!!! {props.moviecd}
+//         </div>
+//     );
+// }
 
-export default Info;
+// export default Info;

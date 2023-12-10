@@ -1,0 +1,9 @@
+.movie-container {
+    border: 2px solid black;
+    background-color: white;
+}
+
+.details-open {
+    border: 3px dotted blue;
+    background-color: rgb(196, 214, 248)
+}

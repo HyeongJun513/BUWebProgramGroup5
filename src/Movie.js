@@ -37,7 +37,7 @@ function Movie({ moviecd, title, audiCnt, rank }) {
         <MovieDetails movieId={moviecd} />
       ) : (
         <>
-          <h2>영화제목: {title} {moviecd}</h2>
+          <h2>영화제목: {title}</h2>
           <h4>관객수: {audiCnt}, 일간 박스오피스 랭킹: {rank}</h4>
           <button className='button' onClick={handleShowDetails}>상세정보</button><br/>
         </>

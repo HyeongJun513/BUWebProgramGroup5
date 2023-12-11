@@ -98,7 +98,7 @@ function Movie({ moviecd, title, audiCnt, rank, openDt }) {
       )}
 
       {showDetails && (
-        <button onClick={handleGoBack}>뒤로가기</button>
+        <button onClick={handleGoBack}>닫기</button>
       )}
     </div>
   );

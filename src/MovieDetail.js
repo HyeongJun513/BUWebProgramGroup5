@@ -46,32 +46,29 @@ const Detail = ({ movieId }) => {
   ) : (
     <div>
       <div>
-        <h1>
+        <h1 style={{ fontWeight: 'bold' }}>
           {movieNm} ({movieNmEn})
-        </h1> 
+        </h1>
         <div>
-          <div>감독</div>
-          <div>
-            {directors?.map((director, i) => (
-              <span key={i}>{director.peopleNm}<br /></span>
-            ))}
-          </div>
+          <div class='font'>감독: {directors?.map((director, i) => (
+            <span key={i}>{director.peopleNm}<br /></span>
+          ))}</div>
         </div>
         <div>
           {audits?.map((rule) => rule.watchGradeNm)}
         </div>
-          <div>
-            {openDt && (
-              <>
-                {openDt.substring(0, 4)}년 {openDt.substring(4, 6)}월 {openDt.substring(6, 8)}일 {prdtStatNm}
-              </>
-            )}
-          </div>
+        <div>
+          {openDt && (
+            <>
+              {openDt.substring(0, 4)}년 {openDt.substring(4, 6)}월 {openDt.substring(6, 8)}일 {prdtStatNm}
+            </>
+          )}
+        </div>
 
       </div>
 
       <div>
-        <div>장르</div>
+        <div class='font'>장르</div>
         <div>
           {genres?.map((genre, i) => (
             <div key={i}>{genre.genreNm}</div>
@@ -79,27 +76,30 @@ const Detail = ({ movieId }) => {
         </div>
       </div>
 
+      <div class='font'>영화 유형</div>
+      <div>{typeNm}</div>
+
       {showExtraInfo && ( // 추가 정보를 표시할 때만 아래 내용을 렌더링
         <div>
-          <div>
-            배우들
+          <div className="actors-container">
+            <div className="actors-title">배우들</div>
             <ul style={{ listStyle: "none" }}>
               {actors?.map((actor, i) => (
-                <li key={i}>
-                  <div>
+                <li className="actor-item" key={i}>
+                  <div className="actor-info">
                     이름: {actor.peopleNm} 배역: {actor.cast}
                   </div>
                 </li>
               ))}
             </ul>
           </div>
-
-          <div>영화 유형: {typeNm}</div>
         </div>
+
+
       )}
 
       <button onClick={handleToggleExtraInfo}>
-        {showExtraInfo ? "추가 정보 닫기" : "추가 정보 보기"}
+        {showExtraInfo ? "추가 정보 닫기" : "더보기"}
       </button>
     </div>
   );

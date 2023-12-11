@@ -5,5 +5,32 @@
 
 .details-open {
     border: 3px solid rgb(135, 135, 244);
-    background-color: rgb(217, 220, 225)
+    background-color: white;
 }
+
+.font {
+    font-size: large;
+    font-weight: bold;
+}
+
+.actors-container {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+
+  .actors-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+    font-size: 18px;
+  }
+
+  .actor-item {
+    margin-bottom: 10px;
+  }
+
+  .actor-info {
+    font-size: 14px;
+    color: #666666;
+  }

@@ -4,6 +4,6 @@
 }
 
 .details-open {
-    border: 3px dotted blue;
-    background-color: rgb(196, 214, 248)
+    border: 3px solid rgb(135, 135, 244);
+    background-color: rgb(217, 220, 225)
 }

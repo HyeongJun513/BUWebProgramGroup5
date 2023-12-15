@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from "react";
 import MovieDetails from "./MovieDetail";
-import "./Movie.css"; // 스타일 파일 import
+import "./Movie.css";
 
 function Movie({ key, moviecd, title, audiCnt, audiAcc, rank, openDt, salesAmt, salesAcc }) {
   const [showDetails, setShowDetails] = useState(false);
   const [previousPage, setPreviousPage] = useState(null);
 
-  //------------------------------------------------------------------------------------------------------
   const moviediv = () => {
     return (
       <div class="card-content white-text">
@@ -54,10 +53,9 @@ function Movie({ key, moviecd, title, audiCnt, audiAcc, rank, openDt, salesAmt, 
         </div>)
     }
   }
-  //------------------------------------------------------------------------------------------------------
 
   const handleShowDetails = () => {
-    setPreviousPage(window.location.pathname); // 현재 페이지 경로를 저장
+    setPreviousPage(window.location.pathname);
     setShowDetails(true);
   };
 
@@ -87,10 +85,6 @@ function Movie({ key, moviecd, title, audiCnt, audiAcc, rank, openDt, salesAmt, 
         <MovieDetails movieId={moviecd} />
       ) : (
         <>
-          {/* <h2>영화제목: {title} {moviecd}</h2>
-          <h4>관객수: {audiCnt}, 일간 박스오피스 랭킹: {rank}</h4>
-          <button onClick={handleShowDetails}>상세정보</button>*/}
-
           <div class="row" align='center' id='div2'> 
             <div class="col s4"></div>
               <div class="col s4">

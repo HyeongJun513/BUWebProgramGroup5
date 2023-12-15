@@ -4,7 +4,7 @@ import { movieDetailGetFetch } from "./apis/movieDetailGetFetch";
 const Detail = ({ movieId }) => {
   const [loading, setLoading] = useState(true);
   const [info, setInfo] = useState({});
-  const [showExtraInfo, setShowExtraInfo] = useState(false); // 추가 정보를 표시할지 여부를 관리하는 상태
+  const [showExtraInfo, setShowExtraInfo] = useState(false);
 
   useEffect(() => {
     const fetchMovieDetail = async () => {
@@ -38,7 +38,7 @@ const Detail = ({ movieId }) => {
   } = info;
 
   const handleToggleExtraInfo = () => {
-    setShowExtraInfo(!showExtraInfo); // 추가 정보를 표시할지 여부를 반전시킴
+    setShowExtraInfo(!showExtraInfo);
   };
 
   return loading ? (
@@ -79,7 +79,7 @@ const Detail = ({ movieId }) => {
       <div class='font'>영화 유형</div>
       <div>{typeNm}</div>
 
-      {showExtraInfo && ( // 추가 정보를 표시할 때만 아래 내용을 렌더링
+      {showExtraInfo && (
         <div>
           <div className="actors-container">
             <div className="actors-title">배우들</div>

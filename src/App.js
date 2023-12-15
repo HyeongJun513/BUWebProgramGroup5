@@ -41,7 +41,7 @@ class App extends Component {
     };
 
     setDate = () => {
-        this.state.inputdate == "" ? this.setState({ date: "20040101" }) : this.setState({ date: this.state.inputdate }); //input이 비어있는 경우 default값 20120101로 date 설정
+        this.state.inputdate == "" ? this.setState({ date: "20040101" }) : this.setState({ date: this.state.inputdate });
         console.log("setDate 실행");
         console.log("inputdate :" + this.state.inputdate);
         console.log("date :" + this.state.date);

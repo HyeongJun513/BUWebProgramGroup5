@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import MovieDetails from "./MovieDetail";
 import "./Movie.css"; // 스타일 파일 import
 
-function Movie({ moviecd, title, audiCnt, rank, openDt }) {
+function Movie({ key, moviecd, title, audiCnt, audiAcc, rank, openDt, salesAmt, salesAcc }) {
   const [showDetails, setShowDetails] = useState(false);
   const [previousPage, setPreviousPage] = useState(null);
 
@@ -17,7 +17,10 @@ function Movie({ moviecd, title, audiCnt, rank, openDt }) {
             <td><b>개봉일</b></td> <td>{openDt}</td>
           </tr>
           <tr>
-            <td><b>관객수</b></td> <td>{audiCnt}</td>
+            <td><b>관객수<br/>(누적 관객수)</b></td> <td>{Number(audiCnt).toLocaleString()}<br/>({Number(audiAcc).toLocaleString()})</td>
+          </tr>
+          <tr>
+            <td><b>일일 매출액<br/>(누적 매출액)</b></td> <td>{Number(salesAmt).toLocaleString()}<br/>({Number(salesAcc).toLocaleString()})</td>
           </tr>
         </tbody>
        </table>
@@ -27,7 +30,7 @@ function Movie({ moviecd, title, audiCnt, rank, openDt }) {
     );
   }
 
-  const moviediv2 = () => { //1위 영화의 경우 금색, 2위의 경우 은색, 3위의 경우 동색 카드 출력
+  const moviediv2 = () => {
     switch (rank){
       case '1' :
         return (

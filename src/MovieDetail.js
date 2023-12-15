@@ -46,9 +46,9 @@ const Detail = ({ movieId }) => {
   ) : (
     <div>
       <div>
-        <h1 style={{ fontWeight: 'bold' }}>
+        <h3 style={{ fontWeight: 'bold' }}>
           {movieNm} ({movieNmEn})
-        </h1>
+        </h3>
         <div>
           <div class='font'>감독: {directors?.map((director, i) => (
             <span key={i}>{director.peopleNm}<br /></span>

@@ -15,19 +15,19 @@ React를 이용하여 제작한 최초의 팀 프로젝트 결과물로,
 
 ## :computer:주요화면
 ### 메인화면
-![MainScreen](./images/1Main.png)
+
 - 연도별 박스오피스 랭킹을 출력합니다.
 - 일간 박스오피스 랭킹을 검색할 수 있습니다.
 
 ### 검색결과
-![SearchScreen](./images/2Search.png)
+
 - 사용자가 입력한 날짜의 일간 박스오피스 순위를 확인할 수 있습니다.
 
 ### 상세페이지
-![DetailScreen](./images/3Detail.png)
+
 - 선택한 영화의 주요 상세 정보를 확인할 수 있습니다.
 
 ### GIF
-![Demonstration](./images/FilmMatch.gif)
+
 
 ## :notebook:비고

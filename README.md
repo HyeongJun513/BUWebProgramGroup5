@@ -3,8 +3,10 @@
 ## :bulb:프로젝트 소개
 ![MainScreen](./images/1Main.png)
 
-프로젝트 기간 : 2023.11 ~ 2023.12
-인원 : 2인
+**프로젝트 기간** : 2023.11 ~ 2023.12<br>
+**인원** : 2인 <br>
+React를 이용하여 제작한 최초의 팀 프로젝트 결과물로,
+[영화진흥위원회오픈API](https://www.kobis.or.kr/kobisopenapi/homepg/main/main.do)를 이용하여 일간, 연간 박스오피스 정보를 가져와 사용자의 날짜 입력에 해당하는 정보를 출력합니다.
 
 ## :clipboard:기술스택
 <img src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
@@ -28,5 +30,4 @@
 ### GIF
 ![Demonstration](./images/FilmMatch.gif)
 
-## 비고
-
+## :notebook:비고

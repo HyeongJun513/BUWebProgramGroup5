@@ -1,7 +1,7 @@
 # :movie_camera:FilimMatch
 
 ## :bulb:프로젝트 소개
-![MainScreen](./images/1Main.png)
+
 
 **프로젝트 기간** : 2023.11 ~ 2023.12<br>
 **인원** : 2인 <br>

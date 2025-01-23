@@ -6,6 +6,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 ![MainScreen](./images/1Main.png)
+![Demonstration](./images/FilmMatch.gif)
 
 ### `npm start`
 

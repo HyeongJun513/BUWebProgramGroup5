@@ -1,8 +1,8 @@
-# Getting Started with Create React App
+# 프로젝트 소개
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Available Scripts :bulb:
 
 In the project directory, you can run:
 ![MainScreen](./images/1Main.png)

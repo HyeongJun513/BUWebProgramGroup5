@@ -28,6 +28,6 @@ React를 이용하여 제작한 최초의 팀 프로젝트 결과물로,
 - 선택한 영화의 주요 상세 정보를 확인할 수 있습니다.
 
 ### 시연
-![Demonstration](./images/FilmMatch.gif)
+
 
 ## :notebook:비고
